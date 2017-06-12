@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Landmann_ProductPreview>
+            <version>2.0.0.0</version>
+        </Landmann_ProductPreview>
+    </modules>
+
+    <global>
+        <blocks>
+            <adminhtml>
+                <rewrite>
+                    <catalog_product_edit>Landmann_ProductPreview_Block_Adminhtml_Catalog_Product_Edit</catalog_product_edit>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+        <helpers>
+            <landmann_productpreview>
+                <class>Landmann_ProductPreview_Helper</class>
+            </landmann_productpreview>
+        </helpers>
+    </global>
+
+    <frontend>
+        <routers>
+            <landmann_productpreview>
+                <use>standard</use>
+                <args>
+                    <module>Landmann_ProductPreview</module>
+                    <frontName>landmann_productpreview</frontName>
+                </args>
+            </landmann_productpreview>
+        </routers>
+        <layout>
+            <updates>
+                <landmann_productpreview>
+                    <file>landmann_productpreview.xml</file>
+                </landmann_productpreview>
+            </updates>
+        </layout>
+    </frontend>
+
+</config>
